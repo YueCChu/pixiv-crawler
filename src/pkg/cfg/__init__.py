@@ -6,7 +6,7 @@ class PixivConfig(typing.NamedTuple):
     phpsessid: str
     proxy: str
     file_path: pathlib.Path
-    sql_url: str
+    # sql_url: str
 
 
 def get_pixiv_config(filename: str = "config.yml") -> PixivConfig:
@@ -18,5 +18,5 @@ def get_pixiv_config(filename: str = "config.yml") -> PixivConfig:
         phpsessid=obj["session_id"],
         proxy=obj["proxy"],
         file_path=pathlib.Path(obj["file_path"]),
-        sql_url=obj["sql_url"],
+        # sql_url=obj["sql_url"],
     )
